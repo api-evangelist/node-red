@@ -1,0 +1,33 @@
+aid: node-red
+name: Node-RED
+description: >-
+  Node-RED is an open source flow-based programming tool for wiring together hardware devices, APIs, and online services.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Workflow Automation
+  - Self-Hosted
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/apis.yml
+created: 2026-03-27
+modified: 2026-03-27
+specificationVersion: 0.19
+apis:
+  - aid: node-red:node-red
+    name: Node-RED
+    description: >-
+      Node-RED is an open source flow-based programming tool for wiring together hardware devices, APIs, and online services.
+    humanURL: https://nodered.org
+    tags:
+      - Workflow Automation
+    properties:
+      - type: Documentation
+        url: https://nodered.org/docs/
+common:
+  - type: Website
+    url: https://nodered.org
+  - type: Documentation
+    url: https://nodered.org/docs/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
