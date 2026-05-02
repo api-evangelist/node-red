@@ -1,0 +1,15 @@
+{
+  "@context": {
+    "@vocab": "https://nodered.org/vocab#",
+    "schema": "https://schema.org/",
+    "Flow": "schema:CreativeWork",
+    "Node": "schema:SoftwareSourceCode",
+    "id": "@id",
+    "type": "@type",
+    "label": "schema:name",
+    "name": "schema:name",
+    "info": "schema:description",
+    "wires": "schema:isRelatedTo",
+    "env": "schema:hasPart"
+  }
+}
