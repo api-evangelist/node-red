@@ -1,0 +1,306 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Node-RED Admin API",
+    "version": "4.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get the active authentication scheme",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/auth/login"
+      },
+      "docs": "Get the active authentication scheme"
+    },
+    {
+      "info": {
+        "name": "Exchange credentials for an access token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://{host}:{port}/auth/token",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Exchange credentials for an access token"
+    },
+    {
+      "info": {
+        "name": "Revoke an access token",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://{host}:{port}/auth/revoke"
+      },
+      "docs": "Revoke an access token"
+    },
+    {
+      "info": {
+        "name": "Get the runtime settings",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/settings"
+      },
+      "docs": "Get the runtime settings"
+    },
+    {
+      "info": {
+        "name": "Get the runtime diagnostics",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/diagnostics"
+      },
+      "docs": "Get the runtime diagnostics"
+    },
+    {
+      "info": {
+        "name": "Get the active flow configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/flows"
+      },
+      "docs": "Get the active flow configuration"
+    },
+    {
+      "info": {
+        "name": "Set the active flow configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://{host}:{port}/flows"
+      },
+      "docs": "Set the active flow configuration"
+    },
+    {
+      "info": {
+        "name": "Get the active flow runtime state",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/flows/state"
+      },
+      "docs": "Get the active flow runtime state"
+    },
+    {
+      "info": {
+        "name": "Set the active flow runtime state",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://{host}:{port}/flows/state"
+      },
+      "docs": "Set the active flow runtime state"
+    },
+    {
+      "info": {
+        "name": "Add a flow to the active configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://{host}:{port}/flow"
+      },
+      "docs": "Add a flow to the active configuration"
+    },
+    {
+      "info": {
+        "name": "Get an individual flow configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/flow/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get an individual flow configuration"
+    },
+    {
+      "info": {
+        "name": "Update an individual flow configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://{host}:{port}/flow/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Update an individual flow configuration"
+    },
+    {
+      "info": {
+        "name": "Delete an individual flow configuration",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://{host}:{port}/flow/:id",
+        "params": [
+          {
+            "name": "id",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete an individual flow configuration"
+    },
+    {
+      "info": {
+        "name": "Get a list of the installed nodes",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/nodes"
+      },
+      "docs": "Get a list of the installed nodes"
+    },
+    {
+      "info": {
+        "name": "Install a new node module",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "http://{host}:{port}/nodes"
+      },
+      "docs": "Install a new node module"
+    },
+    {
+      "info": {
+        "name": "Get a node module information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/nodes/:module",
+        "params": [
+          {
+            "name": "module",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a node module information"
+    },
+    {
+      "info": {
+        "name": "Enable or disable a node module",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://{host}:{port}/nodes/:module",
+        "params": [
+          {
+            "name": "module",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Enable or disable a node module"
+    },
+    {
+      "info": {
+        "name": "Remove a node module",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "http://{host}:{port}/nodes/:module",
+        "params": [
+          {
+            "name": "module",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Remove a node module"
+    },
+    {
+      "info": {
+        "name": "Get a node module set information",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "http://{host}:{port}/nodes/:module/:set",
+        "params": [
+          {
+            "name": "module",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "set",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a node module set information"
+    },
+    {
+      "info": {
+        "name": "Enable or disable a node set",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "http://{host}:{port}/nodes/:module/:set",
+        "params": [
+          {
+            "name": "module",
+            "value": "",
+            "type": "path"
+          },
+          {
+            "name": "set",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Enable or disable a node set"
+    }
+  ],
+  "bundled": true
+}

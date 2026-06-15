@@ -1,0 +1,2061 @@
+{
+  "item": [
+    {
+      "id": "4a1bae0d-5423-4d35-943f-fb2207c51f63",
+      "name": "Get the active authentication scheme",
+      "request": {
+        "name": "Get the active authentication scheme",
+        "description": {},
+        "url": {
+          "path": [
+            "auth",
+            "login"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "89413a96-93d0-4c45-b5c5-14d6d515f52e",
+          "name": "Active authentication scheme",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "auth",
+                "login"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a7a38dbf-f751-4f7c-b1ff-85f3ae745dc6",
+      "name": "Exchange credentials for an access token",
+      "request": {
+        "name": "Exchange credentials for an access token",
+        "description": {},
+        "url": {
+          "path": [
+            "auth",
+            "token"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"client_id\": \"<string>\",\n  \"grant_type\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      },
+      "response": [
+        {
+          "id": "db23397f-f546-4c50-b646-defe62a1990e",
+          "name": "Access token issued",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "auth",
+                "token"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"client_id\": \"<string>\",\n  \"grant_type\": \"<string>\",\n  \"scope\": \"<string>\",\n  \"username\": \"<string>\",\n  \"password\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "1a49aa18-642f-4c81-a2b4-49d1104921db",
+      "name": "Revoke an access token",
+      "request": {
+        "name": "Revoke an access token",
+        "description": {},
+        "url": {
+          "path": [
+            "auth",
+            "revoke"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3e93028e-e366-44af-b32c-92dbafca0e04",
+          "name": "Token revoked",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "auth",
+                "revoke"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "1ecac4d9-8909-419f-a075-897d085b5385",
+      "name": "Get the runtime settings",
+      "request": {
+        "name": "Get the runtime settings",
+        "description": {},
+        "url": {
+          "path": [
+            "settings"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "00660ae7-2370-422c-956f-b0968786f161",
+          "name": "Runtime settings",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "settings"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "177405ba-4289-4966-943c-c3bb671ca854",
+      "name": "Get the runtime diagnostics",
+      "request": {
+        "name": "Get the runtime diagnostics",
+        "description": {},
+        "url": {
+          "path": [
+            "diagnostics"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "698672c9-96ff-4f05-a96d-00c910513993",
+          "name": "Runtime diagnostics",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "diagnostics"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "d708703f-fd53-4eac-a174-7f2393b086be",
+      "name": "Get the active flow configuration",
+      "request": {
+        "name": "Get the active flow configuration",
+        "description": {},
+        "url": {
+          "path": [
+            "flows"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "eccc69bb-1504-4d35-a08b-73985b9bb4cc",
+          "name": "Active flow configuration",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flows"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "cc91b558-5933-499d-ac36-0526ea5520a7",
+      "name": "Set the active flow configuration",
+      "request": {
+        "name": "Set the active flow configuration",
+        "description": {},
+        "url": {
+          "path": [
+            "flows"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "9a90b9e2-dfe4-4a43-b291-6f9cce4fb46c",
+          "name": "Flow configuration updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flows"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "No Content",
+          "code": 204,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "ab2cccf7-5d6a-49a7-a262-a501cb2cb9ab",
+      "name": "Get the active flow runtime state",
+      "request": {
+        "name": "Get the active flow runtime state",
+        "description": {},
+        "url": {
+          "path": [
+            "flows",
+            "state"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "97ea470d-b8d2-4784-b965-d675f96849dc",
+          "name": "Runtime flow state",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flows",
+                "state"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "37933746-447d-4fd4-9021-52f94556de47",
+      "name": "Set the active flow runtime state",
+      "request": {
+        "name": "Set the active flow runtime state",
+        "description": {},
+        "url": {
+          "path": [
+            "flows",
+            "state"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "df29ad96-e6c2-4b0c-9a8c-65505f20fb2a",
+          "name": "Flow state updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flows",
+                "state"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "45bdb4eb-df43-4790-b84c-bf2a7b0d1697",
+      "name": "Add a flow to the active configuration",
+      "request": {
+        "name": "Add a flow to the active configuration",
+        "description": {},
+        "url": {
+          "path": [
+            "flow"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "45288e66-1855-49b7-bf4a-70b9993c3c92",
+          "name": "Flow added",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flow"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "42746379-d6b4-4a1b-b2db-157681b420b8",
+      "name": "Get an individual flow configuration",
+      "request": {
+        "name": "Get an individual flow configuration",
+        "description": {},
+        "url": {
+          "path": [
+            "flow",
+            ":id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "id",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "43c69a23-27a9-4b3d-943e-1d99566718b4",
+          "name": "Flow configuration",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flow",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "980588f7-d41c-488c-b987-6acd6991d78a",
+      "name": "Update an individual flow configuration",
+      "request": {
+        "name": "Update an individual flow configuration",
+        "description": {},
+        "url": {
+          "path": [
+            "flow",
+            ":id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "id",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "PUT",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "92b967bf-b16c-447f-8e3b-3cf9afe43675",
+          "name": "Flow updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flow",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "PUT",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f0074aa0-4ab0-46e1-aabb-2af53d01385b",
+      "name": "Delete an individual flow configuration",
+      "request": {
+        "name": "Delete an individual flow configuration",
+        "description": {},
+        "url": {
+          "path": [
+            "flow",
+            ":id"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "id",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "2c9a6097-d2d0-48d2-81c9-ccfa66373787",
+          "name": "Flow removed",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "flow",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "No Content",
+          "code": 204,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "07b2d323-3935-4da8-8f35-c9739c9f8b1a",
+      "name": "Get a list of the installed nodes",
+      "request": {
+        "name": "Get a list of the installed nodes",
+        "description": {},
+        "url": {
+          "path": [
+            "nodes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0354bf4b-5d01-4560-bac0-c8688ec8e578",
+          "name": "List of installed nodes",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nodes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "23af8db8-7a47-4e90-bd6b-a44410817c9a",
+      "name": "Install a new node module",
+      "request": {
+        "name": "Install a new node module",
+        "description": {},
+        "url": {
+          "path": [
+            "nodes"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "POST",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "3889e1dd-9b8f-40dc-a4bb-b4513813f000",
+          "name": "Node module installed",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nodes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "POST",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "f1210faa-fe88-4e91-9c31-7dfdc1f1d698",
+      "name": "Get a node module information",
+      "request": {
+        "name": "Get a node module information",
+        "description": {},
+        "url": {
+          "path": [
+            "nodes",
+            ":module"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "module",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "cebad6e9-61ff-4b0d-85a7-068f0b2bd20c",
+          "name": "Module information",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nodes",
+                ":module"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "module",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "a022f607-a17f-4064-8f4e-e3211b9c90b3",
+      "name": "Enable or disable a node module",
+      "request": {
+        "name": "Enable or disable a node module",
+        "description": {},
+        "url": {
+          "path": [
+            "nodes",
+            ":module"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "module",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "PUT",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "b8e99f66-32ba-4be4-a430-9dbefb45ee79",
+          "name": "Module state updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nodes",
+                ":module"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "module",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "PUT",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "3c1491ac-694a-4873-af3c-d4f9420e6edb",
+      "name": "Remove a node module",
+      "request": {
+        "name": "Remove a node module",
+        "description": {},
+        "url": {
+          "path": [
+            "nodes",
+            ":module"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "module",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "0c91f55f-fba3-4470-860e-b5ef0b469baa",
+          "name": "Module removed",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nodes",
+                ":module"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "module",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "DELETE",
+            "body": {}
+          },
+          "status": "No Content",
+          "code": 204,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "8cc71fb5-25b6-4cd5-a7b4-18b5e50b8700",
+      "name": "Get a node module set information",
+      "request": {
+        "name": "Get a node module set information",
+        "description": {},
+        "url": {
+          "path": [
+            "nodes",
+            ":module",
+            ":set"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "module",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "set",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "GET",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "c9572afa-5b1c-4488-99ed-cec62504768d",
+          "name": "Module set information",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nodes",
+                ":module",
+                ":set"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "module",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "set",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "GET",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "2ed4e937-4bcc-4fef-a3a8-5cbd6578f44b",
+      "name": "Enable or disable a node set",
+      "request": {
+        "name": "Enable or disable a node set",
+        "description": {},
+        "url": {
+          "path": [
+            "nodes",
+            ":module",
+            ":set"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": [
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "module",
+              "description": "(Required) "
+            },
+            {
+              "disabled": false,
+              "type": "any",
+              "value": "<string>",
+              "key": "set",
+              "description": "(Required) "
+            },
+            {
+              "description": "Host where Node-RED is running",
+              "type": "any",
+              "value": "{{host}}",
+              "key": "host"
+            },
+            {
+              "description": "Node-RED HTTP port",
+              "type": "any",
+              "value": "{{port}}",
+              "key": "port"
+            }
+          ]
+        },
+        "method": "PUT",
+        "auth": null
+      },
+      "response": [
+        {
+          "id": "22fd4001-4bdf-4b86-af52-a553367ebfda",
+          "name": "Set state updated",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "nodes",
+                ":module",
+                ":set"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "module",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "set",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Host where Node-RED is running",
+                  "type": "any",
+                  "value": "{{host}}",
+                  "key": "host"
+                },
+                {
+                  "description": "Node-RED HTTP port",
+                  "type": "any",
+                  "value": "{{port}}",
+                  "key": "port"
+                }
+              ]
+            },
+            "header": [
+              {
+                "description": {
+                  "content": "Added as a part of security scheme: bearer",
+                  "type": "text/plain"
+                },
+                "key": "Authorization",
+                "value": "Bearer <token>"
+              }
+            ],
+            "method": "PUT",
+            "body": {}
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "text/plain"
+            }
+          ],
+          "body": "",
+          "cookie": [],
+          "_postman_previewlanguage": "text"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Host where Node-RED is running",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "localhost",
+      "key": "host"
+    },
+    {
+      "description": {
+        "content": "Node-RED HTTP port",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "1880",
+      "key": "port"
+    },
+    {
+      "type": "string",
+      "value": "http://{{host}}:{{port}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "86ed2ab3-bba6-46d6-b0d8-e341a104c389",
+    "name": "Node-RED Admin API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Node-RED's Admin HTTP API enables remote administration of the runtime. It is used by the Node-RED Editor and the command-line admin tool to manage flows, nodes, settings, and authentication.\n\nContact Support:\n Name: Node-RED Project",
+      "type": "text/plain"
+    }
+  }
+}
