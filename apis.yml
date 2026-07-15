@@ -41,6 +41,8 @@ apis:
       - type: Repository
         url: https://github.com/node-red/node-red
 common:
+  - type: AgenticAccess
+    url: agentic-access/node-red-agentic-access.yml
   - type: DomainSecurity
     url: security/node-red-domain-security.yml
   - type: Authentication
