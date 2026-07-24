@@ -1,0 +1,43 @@
+openapi: 3.1.0
+info:
+  title: Node-RED Admin Auth Settings API
+  description: Node-RED's Admin HTTP API enables remote administration of the runtime. It is used by the Node-RED Editor and the command-line admin tool to manage flows, nodes, settings, and authentication.
+  version: 4.0.0
+  contact:
+    name: Node-RED Project
+    url: https://nodered.org
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: http://{host}:{port}
+  variables:
+    host:
+      default: localhost
+      description: Host where Node-RED is running
+    port:
+      default: '1880'
+      description: Node-RED HTTP port
+security:
+- BearerAuth: []
+tags:
+- name: Settings
+paths:
+  /settings:
+    get:
+      summary: Get the runtime settings
+      operationId: getSettings
+      responses:
+        '200':
+          description: Runtime settings
+      tags:
+      - Settings
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Node-RED Admin API Reference
+  url: https://nodered.org/docs/api/admin/methods/

@@ -1,0 +1,78 @@
+openapi: 3.1.0
+info:
+  title: Node-RED Admin Auth API
+  description: Node-RED's Admin HTTP API enables remote administration of the runtime. It is used by the Node-RED Editor and the command-line admin tool to manage flows, nodes, settings, and authentication.
+  version: 4.0.0
+  contact:
+    name: Node-RED Project
+    url: https://nodered.org
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: http://{host}:{port}
+  variables:
+    host:
+      default: localhost
+      description: Host where Node-RED is running
+    port:
+      default: '1880'
+      description: Node-RED HTTP port
+security:
+- BearerAuth: []
+tags:
+- name: Auth
+paths:
+  /auth/login:
+    get:
+      summary: Get the active authentication scheme
+      operationId: getAuthLogin
+      responses:
+        '200':
+          description: Active authentication scheme
+      tags:
+      - Auth
+  /auth/token:
+    post:
+      summary: Exchange credentials for an access token
+      operationId: postAuthToken
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                client_id:
+                  type: string
+                grant_type:
+                  type: string
+                scope:
+                  type: string
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Access token issued
+      tags:
+      - Auth
+  /auth/revoke:
+    post:
+      summary: Revoke an access token
+      operationId: postAuthRevoke
+      responses:
+        '200':
+          description: Token revoked
+      tags:
+      - Auth
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Node-RED Admin API Reference
+  url: https://nodered.org/docs/api/admin/methods/

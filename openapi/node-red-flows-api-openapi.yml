@@ -1,0 +1,68 @@
+openapi: 3.1.0
+info:
+  title: Node-RED Admin Auth Flows API
+  description: Node-RED's Admin HTTP API enables remote administration of the runtime. It is used by the Node-RED Editor and the command-line admin tool to manage flows, nodes, settings, and authentication.
+  version: 4.0.0
+  contact:
+    name: Node-RED Project
+    url: https://nodered.org
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: http://{host}:{port}
+  variables:
+    host:
+      default: localhost
+      description: Host where Node-RED is running
+    port:
+      default: '1880'
+      description: Node-RED HTTP port
+security:
+- BearerAuth: []
+tags:
+- name: Flows
+paths:
+  /flows:
+    get:
+      summary: Get the active flow configuration
+      operationId: getFlows
+      responses:
+        '200':
+          description: Active flow configuration
+      tags:
+      - Flows
+    post:
+      summary: Set the active flow configuration
+      operationId: postFlows
+      responses:
+        '204':
+          description: Flow configuration updated
+      tags:
+      - Flows
+  /flows/state:
+    get:
+      summary: Get the active flow runtime state
+      operationId: getFlowsState
+      responses:
+        '200':
+          description: Runtime flow state
+      tags:
+      - Flows
+    post:
+      summary: Set the active flow runtime state
+      operationId: postFlowsState
+      responses:
+        '200':
+          description: Flow state updated
+      tags:
+      - Flows
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Node-RED Admin API Reference
+  url: https://nodered.org/docs/api/admin/methods/

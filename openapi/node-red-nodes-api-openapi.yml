@@ -1,0 +1,110 @@
+openapi: 3.1.0
+info:
+  title: Node-RED Admin Auth Nodes API
+  description: Node-RED's Admin HTTP API enables remote administration of the runtime. It is used by the Node-RED Editor and the command-line admin tool to manage flows, nodes, settings, and authentication.
+  version: 4.0.0
+  contact:
+    name: Node-RED Project
+    url: https://nodered.org
+  license:
+    name: Apache-2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+servers:
+- url: http://{host}:{port}
+  variables:
+    host:
+      default: localhost
+      description: Host where Node-RED is running
+    port:
+      default: '1880'
+      description: Node-RED HTTP port
+security:
+- BearerAuth: []
+tags:
+- name: Nodes
+paths:
+  /nodes:
+    get:
+      summary: Get a list of the installed nodes
+      operationId: getNodes
+      responses:
+        '200':
+          description: List of installed nodes
+      tags:
+      - Nodes
+    post:
+      summary: Install a new node module
+      operationId: postNodes
+      responses:
+        '200':
+          description: Node module installed
+      tags:
+      - Nodes
+  /nodes/{module}:
+    parameters:
+    - in: path
+      name: module
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get a node module information
+      operationId: getNodeModule
+      responses:
+        '200':
+          description: Module information
+      tags:
+      - Nodes
+    put:
+      summary: Enable or disable a node module
+      operationId: putNodeModule
+      responses:
+        '200':
+          description: Module state updated
+      tags:
+      - Nodes
+    delete:
+      summary: Remove a node module
+      operationId: deleteNodeModule
+      responses:
+        '204':
+          description: Module removed
+      tags:
+      - Nodes
+  /nodes/{module}/{set}:
+    parameters:
+    - in: path
+      name: module
+      required: true
+      schema:
+        type: string
+    - in: path
+      name: set
+      required: true
+      schema:
+        type: string
+    get:
+      summary: Get a node module set information
+      operationId: getNodeModuleSet
+      responses:
+        '200':
+          description: Module set information
+      tags:
+      - Nodes
+    put:
+      summary: Enable or disable a node set
+      operationId: putNodeModuleSet
+      responses:
+        '200':
+          description: Set state updated
+      tags:
+      - Nodes
+components:
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+externalDocs:
+  description: Node-RED Admin API Reference
+  url: https://nodered.org/docs/api/admin/methods/
