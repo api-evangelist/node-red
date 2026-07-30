@@ -5,7 +5,20 @@ description: >-
   services. The runtime exposes an Admin HTTP API used by the Node-RED Editor and the command-line admin tool to manage
   flows, nodes, settings, diagnostics, and authentication.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/node-red.png
 tags:
   - Self-Hosted
   - Workflow Automation
@@ -16,30 +29,138 @@ created: '2026-03-27'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-  - aid: node-red:node-red
-    name: Node-RED Admin API
-    description: >-
-      Node-RED's Admin HTTP API for remote administration of the runtime, including flows, nodes, settings, diagnostics,
-      and authentication.
-    humanURL: https://nodered.org
-    baseURL: http://localhost:1880
-    tags:
-      - Workflow Automation
-      - Flow-Based Programming
-    properties:
-      - type: Documentation
-        url: https://nodered.org/docs/
-      - type: API Documentation
-        url: https://nodered.org/docs/api/admin/methods/
-      - type: OpenAPI
-        url: https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/openapi/node-red-admin-openapi.yml
-      - type: JSONSchema
-        url: >-
-          https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-schema/node-red-flow-schema.json
-      - type: JSONLDContext
-        url: https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-ld/node-red-context.jsonld
-      - type: Repository
-        url: https://github.com/node-red/node-red
+- aid: node-red:node-red-auth-api
+  name: Node-RED Auth API
+  description: The Auth API from Node-RED — 3 operation(s) for auth.
+  humanURL: https://nodered.org
+  baseURL: http://localhost:1880
+  tags:
+  - Auth
+  properties:
+  - type: OpenAPI
+    url: openapi/node-red-auth-api-openapi.yml
+  - type: Documentation
+    url: https://nodered.org/docs/
+  - type: API Documentation
+    url: https://nodered.org/docs/api/admin/methods/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-schema/node-red-flow-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-ld/node-red-context.jsonld
+  - type: Repository
+    url: https://github.com/node-red/node-red
+- aid: node-red:node-red-diagnostics-api
+  name: Node-RED Diagnostics API
+  description: The Diagnostics API from Node-RED — 1 operation(s) for diagnostics.
+  humanURL: https://nodered.org
+  baseURL: http://localhost:1880
+  tags:
+  - Diagnostics
+  properties:
+  - type: OpenAPI
+    url: openapi/node-red-diagnostics-api-openapi.yml
+  - type: Documentation
+    url: https://nodered.org/docs/
+  - type: API Documentation
+    url: https://nodered.org/docs/api/admin/methods/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-schema/node-red-flow-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-ld/node-red-context.jsonld
+  - type: Repository
+    url: https://github.com/node-red/node-red
+- aid: node-red:node-red-flow-api
+  name: Node-RED Flow API
+  description: The Flow API from Node-RED — 2 operation(s) for flow.
+  humanURL: https://nodered.org
+  baseURL: http://localhost:1880
+  tags:
+  - Flow
+  properties:
+  - type: OpenAPI
+    url: openapi/node-red-flow-api-openapi.yml
+  - type: Documentation
+    url: https://nodered.org/docs/
+  - type: API Documentation
+    url: https://nodered.org/docs/api/admin/methods/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-schema/node-red-flow-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-ld/node-red-context.jsonld
+  - type: Repository
+    url: https://github.com/node-red/node-red
+- aid: node-red:node-red-flows-api
+  name: Node-RED Flows API
+  description: The Flows API from Node-RED — 2 operation(s) for flows.
+  humanURL: https://nodered.org
+  baseURL: http://localhost:1880
+  tags:
+  - Flows
+  properties:
+  - type: OpenAPI
+    url: openapi/node-red-flows-api-openapi.yml
+  - type: Documentation
+    url: https://nodered.org/docs/
+  - type: API Documentation
+    url: https://nodered.org/docs/api/admin/methods/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-schema/node-red-flow-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-ld/node-red-context.jsonld
+  - type: Repository
+    url: https://github.com/node-red/node-red
+- aid: node-red:node-red-nodes-api
+  name: Node-RED Nodes API
+  description: The Nodes API from Node-RED — 3 operation(s) for nodes.
+  humanURL: https://nodered.org
+  baseURL: http://localhost:1880
+  tags:
+  - Nodes
+  properties:
+  - type: OpenAPI
+    url: openapi/node-red-nodes-api-openapi.yml
+  - type: Documentation
+    url: https://nodered.org/docs/
+  - type: API Documentation
+    url: https://nodered.org/docs/api/admin/methods/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-schema/node-red-flow-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-ld/node-red-context.jsonld
+  - type: Repository
+    url: https://github.com/node-red/node-red
+- aid: node-red:node-red-settings-api
+  name: Node-RED Settings API
+  description: The Settings API from Node-RED — 1 operation(s) for settings.
+  humanURL: https://nodered.org
+  baseURL: http://localhost:1880
+  tags:
+  - Settings
+  properties:
+  - type: OpenAPI
+    url: openapi/node-red-settings-api-openapi.yml
+  - type: Documentation
+    url: https://nodered.org/docs/
+  - type: API Documentation
+    url: https://nodered.org/docs/api/admin/methods/
+  - type: JSONSchema
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-schema/node-red-flow-schema.json
+  - type: JSONLDContext
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/node-red/refs/heads/main/json-ld/node-red-context.jsonld
+  - type: Repository
+    url: https://github.com/node-red/node-red
 common:
   - type: AgenticAccess
     url: agentic-access/node-red-agentic-access.yml
