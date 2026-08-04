@@ -1,0 +1,24 @@
+{
+  "provider": "node-red",
+  "sources": [
+    "node-red-auth-api-openapi.yml",
+    "node-red-diagnostics-api-openapi.yml",
+    "node-red-flow-api-openapi.yml",
+    "node-red-flows-api-openapi.yml",
+    "node-red-nodes-api-openapi.yml",
+    "node-red-settings-api-openapi.yml"
+  ],
+  "outputs": [
+    "node-red-auth-api-openapi.yml",
+    "node-red-diagnostics-api-openapi.yml",
+    "node-red-flow-api-openapi.yml",
+    "node-red-flows-api-openapi.yml",
+    "node-red-nodes-api-openapi.yml",
+    "node-red-settings-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
