@@ -1,0 +1,89 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Node-RED Admin Auth Flow API",
+    "version": "4.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Flow",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Add a flow to the active configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://{host}:{port}/flow"
+          },
+          "docs": "Add a flow to the active configuration"
+        },
+        {
+          "info": {
+            "name": "Get an individual flow configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}:{port}/flow/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an individual flow configuration"
+        },
+        {
+          "info": {
+            "name": "Update an individual flow configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://{host}:{port}/flow/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Update an individual flow configuration"
+        },
+        {
+          "info": {
+            "name": "Delete an individual flow configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://{host}:{port}/flow/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an individual flow configuration"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

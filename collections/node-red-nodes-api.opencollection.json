@@ -1,0 +1,146 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Node-RED Admin Auth Nodes API",
+    "version": "4.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Nodes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get a list of the installed nodes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}:{port}/nodes"
+          },
+          "docs": "Get a list of the installed nodes"
+        },
+        {
+          "info": {
+            "name": "Install a new node module",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://{host}:{port}/nodes"
+          },
+          "docs": "Install a new node module"
+        },
+        {
+          "info": {
+            "name": "Get a node module information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}:{port}/nodes/:module",
+            "params": [
+              {
+                "name": "module",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a node module information"
+        },
+        {
+          "info": {
+            "name": "Enable or disable a node module",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://{host}:{port}/nodes/:module",
+            "params": [
+              {
+                "name": "module",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Enable or disable a node module"
+        },
+        {
+          "info": {
+            "name": "Remove a node module",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "http://{host}:{port}/nodes/:module",
+            "params": [
+              {
+                "name": "module",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Remove a node module"
+        },
+        {
+          "info": {
+            "name": "Get a node module set information",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}:{port}/nodes/:module/:set",
+            "params": [
+              {
+                "name": "module",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "set",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a node module set information"
+        },
+        {
+          "info": {
+            "name": "Enable or disable a node set",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "http://{host}:{port}/nodes/:module/:set",
+            "params": [
+              {
+                "name": "module",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "set",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Enable or disable a node set"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,68 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Node-RED Admin Auth Flows API",
+    "version": "4.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Flows",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get the active flow configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}:{port}/flows"
+          },
+          "docs": "Get the active flow configuration"
+        },
+        {
+          "info": {
+            "name": "Set the active flow configuration",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://{host}:{port}/flows"
+          },
+          "docs": "Set the active flow configuration"
+        },
+        {
+          "info": {
+            "name": "Get the active flow runtime state",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://{host}:{port}/flows/state"
+          },
+          "docs": "Get the active flow runtime state"
+        },
+        {
+          "info": {
+            "name": "Set the active flow runtime state",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://{host}:{port}/flows/state"
+          },
+          "docs": "Set the active flow runtime state"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
