@@ -21,6 +21,11 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/node-red.png
 tags:
   - Self-Hosted
+  - Workflow-Automation
+  - Flow-Based Programming
+  - IoT
+tags_raw:
+  - Self-Hosted
   - Workflow Automation
   - Flow-Based Programming
   - IoT
@@ -35,6 +40,8 @@ apis:
   humanURL: https://nodered.org
   baseURL: http://localhost:1880
   tags:
+  - Authentication
+  tags_raw:
   - Auth
   properties:
   - type: OpenAPI
