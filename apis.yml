@@ -123,6 +123,8 @@ apis:
   humanURL: https://nodered.org
   baseURL: http://localhost:1880
   tags:
+  - Flow
+  tags_raw:
   - Flows
   properties:
   - type: OpenAPI
@@ -145,6 +147,8 @@ apis:
   humanURL: https://nodered.org
   baseURL: http://localhost:1880
   tags:
+  - Node
+  tags_raw:
   - Nodes
   properties:
   - type: OpenAPI
