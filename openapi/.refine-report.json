@@ -1,12 +1,7 @@
 {
   "provider": "node-red",
   "sources": [
-    "node-red-auth-api-openapi.yml",
-    "node-red-diagnostics-api-openapi.yml",
-    "node-red-flow-api-openapi.yml",
-    "node-red-flows-api-openapi.yml",
-    "node-red-nodes-api-openapi.yml",
-    "node-red-settings-api-openapi.yml"
+    "_original/node-red-admin-openapi.yml"
   ],
   "outputs": [
     "node-red-auth-api-openapi.yml",
@@ -19,6 +14,43 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "node-red-admin-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "node-red-admin-openapi.yml: tagged paths GET /auth/login -> Auth",
+    "node-red-admin-openapi.yml: tagged paths POST /auth/token -> Auth",
+    "node-red-admin-openapi.yml: tagged paths POST /auth/revoke -> Auth",
+    "node-red-admin-openapi.yml: tagged paths GET /settings -> Settings",
+    "node-red-admin-openapi.yml: tagged paths GET /diagnostics -> Diagnostics",
+    "node-red-admin-openapi.yml: tagged paths GET /flows -> Flows",
+    "node-red-admin-openapi.yml: tagged paths POST /flows -> Flows",
+    "node-red-admin-openapi.yml: tagged paths GET /flows/state -> Flows",
+    "node-red-admin-openapi.yml: tagged paths POST /flows/state -> Flows",
+    "node-red-admin-openapi.yml: tagged paths POST /flow -> Flow",
+    "node-red-admin-openapi.yml: tagged paths GET /flow/{id} -> Flow",
+    "node-red-admin-openapi.yml: tagged paths PUT /flow/{id} -> Flow",
+    "node-red-admin-openapi.yml: tagged paths DELETE /flow/{id} -> Flow",
+    "node-red-admin-openapi.yml: tagged paths GET /nodes -> Nodes",
+    "node-red-admin-openapi.yml: tagged paths POST /nodes -> Nodes",
+    "node-red-admin-openapi.yml: tagged paths GET /nodes/{module} -> Nodes",
+    "node-red-admin-openapi.yml: tagged paths PUT /nodes/{module} -> Nodes",
+    "node-red-admin-openapi.yml: tagged paths DELETE /nodes/{module} -> Nodes",
+    "node-red-admin-openapi.yml: tagged paths GET /nodes/{module}/{set} -> Nodes",
+    "node-red-admin-openapi.yml: tagged paths PUT /nodes/{module}/{set} -> Nodes",
+    "node-red-admin-openapi.yml: declared missing tag: Auth",
+    "node-red-admin-openapi.yml: declared missing tag: Diagnostics",
+    "node-red-admin-openapi.yml: declared missing tag: Flow",
+    "node-red-admin-openapi.yml: declared missing tag: Flows",
+    "node-red-admin-openapi.yml: declared missing tag: Nodes",
+    "node-red-admin-openapi.yml: declared missing tag: Settings",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "node-red-auth-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "node-red-diagnostics-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "node-red-flow-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "node-red-flows-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "node-red-nodes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "node-red-settings-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

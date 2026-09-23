@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Node-RED Admin Auth Diagnostics API
+  title: Node-RED Admin Diagnostics API
   description: Node-RED's Admin HTTP API enables remote administration of the runtime. It is used by the Node-RED Editor and the command-line admin tool to manage flows, nodes, settings, and authentication.
   version: 4.0.0
   contact:
